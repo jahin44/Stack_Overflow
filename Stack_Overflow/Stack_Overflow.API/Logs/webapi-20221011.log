@@ -1,0 +1,29 @@
+[2022-10-11 23:24:19.997 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-11 23:24:20.056 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-11 23:24:20.062 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-11 23:24:20.063 +06:00  INF]  Hosting environment: Development
+[2022-10-11 23:24:20.063 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-11 23:24:21.522 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-11 23:24:22.259 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-11 23:24:22.274 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 13.0872ms
+[2022-10-11 23:24:22.306 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 793.2506ms
+[2022-10-11 23:24:22.975 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-11 23:24:23.237 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 261.4898ms
+[2022-10-11 23:24:31.949 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/WeatherForecast - -
+[2022-10-11 23:24:31.967 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.WeatherForecastController.Get (Stack_Overflow.API)'
+[2022-10-11 23:24:31.990 +06:00  INF]  Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[Stack_Overflow.API.WeatherForecast] Get() on controller Stack_Overflow.API.Controllers.WeatherForecastController (Stack_Overflow.API).
+[2022-10-11 23:24:32.009 +06:00  INF]  Executing ObjectResult, writing value of type 'Stack_Overflow.API.WeatherForecast[]'.
+[2022-10-11 23:24:32.034 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.WeatherForecastController.Get (Stack_Overflow.API) in 33.5587ms
+[2022-10-11 23:24:32.037 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.WeatherForecastController.Get (Stack_Overflow.API)'
+[2022-10-11 23:24:32.037 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/WeatherForecast - - - 200 - application/json;+charset=utf-8 88.6362ms
+[2022-10-11 23:26:30.082 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-11 23:26:30.136 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-11 23:26:30.140 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-11 23:26:30.141 +06:00  INF]  Hosting environment: Development
+[2022-10-11 23:26:30.141 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-11 23:26:31.486 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-11 23:26:32.112 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-11 23:26:32.132 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 16.9799ms
+[2022-10-11 23:26:32.195 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 716.6508ms
+[2022-10-11 23:26:32.756 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-11 23:26:33.756 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1000.4691ms
