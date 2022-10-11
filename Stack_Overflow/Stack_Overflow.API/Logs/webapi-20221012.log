@@ -1,0 +1,33 @@
+[2022-10-12 01:30:02.609 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 01:30:02.686 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 01:30:02.694 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 01:30:02.695 +06:00  INF]  Hosting environment: Development
+[2022-10-12 01:30:02.695 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 01:30:05.346 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 01:30:06.571 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 1212.2230ms
+[2022-10-12 01:30:06.648 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 01:30:06.660 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 11.9227ms
+[2022-10-12 01:30:07.744 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 01:30:07.988 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 243.9876ms
+[2022-10-12 01:46:25.851 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 01:46:25.926 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 01:46:25.933 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 01:46:25.933 +06:00  INF]  Hosting environment: Development
+[2022-10-12 01:46:25.933 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 01:46:27.295 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 01:46:28.016 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 01:46:28.035 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 16.6455ms
+[2022-10-12 01:46:28.069 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 781.7543ms
+[2022-10-12 01:46:28.564 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 01:46:28.800 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 236.1973ms
+[2022-10-12 01:57:24.737 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 01:57:24.855 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 01:57:24.866 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 01:57:24.866 +06:00  INF]  Hosting environment: Development
+[2022-10-12 01:57:24.866 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 01:57:26.107 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 01:57:28.036 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 01:57:28.054 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 15.2575ms
+[2022-10-12 01:57:28.069 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 1970.7939ms
+[2022-10-12 01:57:28.614 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 01:57:28.824 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 210.5688ms
