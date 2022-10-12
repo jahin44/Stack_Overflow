@@ -1,5 +1,6 @@
 ﻿using Autofac;
 using Stack_Overflow.API.Contexts;
+using Stack_Overflow.API.Services;
 
 namespace Stack_Overflow.API
 {
@@ -21,10 +22,13 @@ namespace Stack_Overflow.API
             builder.RegisterType<ApplicationDbContext>().As<IApplicationDbContext>()
                 .WithParameter("connectionString", _connectionString)
                 .InstancePerLifetimeScope();
-           
-            //builder.RegisterType<ShowGroupDataService>().As<IShowGroupDataService>()
-            //  .InstancePerLifetimeScope();
 
+            builder.RegisterType<QuestionService>().As<IQuestionService>()
+           .InstancePerLifetimeScope();
+
+            builder.RegisterType<AnswerService>().As<IAnswerService>()
+            .InstancePerLifetimeScope();
+            
             base.Load(builder);
         }
 

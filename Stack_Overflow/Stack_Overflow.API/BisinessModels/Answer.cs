@@ -1,4 +1,4 @@
-﻿namespace Stack_Overflow.API.Models
+﻿namespace Stack_Overflow.API.BisinessModels
 {
     public class Answer
     {
@@ -6,10 +6,5 @@
         public DateTime InsertDate { get; set; }
         public int QuestionId { get; set; }
         public string? Ans { get; set; }
-        public Question? Question { get; set; }
-
-        public Vote? Vote { get; set; }
-
-
     }
 }

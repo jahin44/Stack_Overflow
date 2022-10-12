@@ -30,6 +30,8 @@ namespace Stack_Overflow.API.Contexts
                 .HasKey(Q => Q.Id);
             modelBuilder.Entity<Answer>()
                 .HasKey(ed => ed.Id);
+            modelBuilder.Entity<Vote>()
+                .HasKey(V => V.Id);
             
 
             modelBuilder.Entity<Answer>()
@@ -37,11 +39,17 @@ namespace Stack_Overflow.API.Contexts
                .WithMany(Q => Q.Answers)
                .HasForeignKey(ed => ed.QuestionId);
 
+            modelBuilder.Entity<Answer>()
+               .HasOne<Vote>(s => s.Vote)
+               .WithOne(ad => ad.Answer)
+               .HasForeignKey<Vote>(ad => ad.AnswerId);
+
             base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Question> Questions { get; set; }
         public DbSet<Answer> Answers { get; set; }
+        public DbSet<Vote> Votes { get; set; }
         
 
 

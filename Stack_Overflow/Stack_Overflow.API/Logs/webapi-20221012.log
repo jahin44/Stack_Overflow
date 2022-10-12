@@ -31,3 +31,666 @@
 [2022-10-12 01:57:28.069 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 1970.7939ms
 [2022-10-12 01:57:28.614 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
 [2022-10-12 01:57:28.824 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 210.5688ms
+[2022-10-12 03:44:50.375 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 03:44:50.441 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 03:44:50.445 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 03:44:50.446 +06:00  INF]  Hosting environment: Development
+[2022-10-12 03:44:50.446 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 03:44:52.530 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 03:44:53.297 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 03:44:53.314 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 791.0196ms
+[2022-10-12 03:44:53.314 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 13.7496ms
+[2022-10-12 03:44:53.993 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 03:44:54.245 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 253.0017ms
+[2022-10-12 03:45:20.094 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 244
+[2022-10-12 03:45:20.105 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 03:45:20.121 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 03:45:20.179 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.Models.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 03:45:20.203 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 12.6915ms
+[2022-10-12 03:45:20.208 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 03:45:20.211 +06:00  ERR]  An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Stack_Overflow.API.Services.QuestionService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'Stack_Overflow.API.Services.QuestionService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.EntityFrameworkCore.DbContext dbContext' of constructor 'Void .ctor(Microsoft.EntityFrameworkCore.DbContext)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass12_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method341(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-10-12 03:45:21.057 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 244 - 500 - text/plain;+charset=utf-8 962.9164ms
+[2022-10-12 03:46:15.516 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 255
+[2022-10-12 03:46:15.518 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 03:46:15.522 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 03:46:15.524 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.Models.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 03:46:15.526 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 1.6172ms
+[2022-10-12 03:46:15.526 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 03:46:15.527 +06:00  ERR]  An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Stack_Overflow.API.Services.QuestionService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'Stack_Overflow.API.Services.QuestionService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.EntityFrameworkCore.DbContext dbContext' of constructor 'Void .ctor(Microsoft.EntityFrameworkCore.DbContext)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass12_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method341(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-10-12 03:46:15.530 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 255 - 500 - text/plain;+charset=utf-8 13.5927ms
+[2022-10-12 03:46:56.673 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 227
+[2022-10-12 03:46:56.674 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 03:46:56.674 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 03:46:56.677 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.Models.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 03:46:56.678 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 1.0931ms
+[2022-10-12 03:46:56.679 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 03:46:56.680 +06:00  ERR]  An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Stack_Overflow.API.Services.QuestionService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'Stack_Overflow.API.Services.QuestionService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.EntityFrameworkCore.DbContext dbContext' of constructor 'Void .ctor(Microsoft.EntityFrameworkCore.DbContext)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass12_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method341(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-10-12 03:46:56.682 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 227 - 500 - text/plain;+charset=utf-8 8.9493ms
+[2022-10-12 03:48:17.581 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 238
+[2022-10-12 03:48:17.581 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 03:48:17.582 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 03:48:17.582 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.Models.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 03:48:17.589 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 6.307ms
+[2022-10-12 03:48:17.589 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 03:48:17.590 +06:00  ERR]  An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Stack_Overflow.API.Services.QuestionService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'Stack_Overflow.API.Services.QuestionService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.EntityFrameworkCore.DbContext dbContext' of constructor 'Void .ctor(Microsoft.EntityFrameworkCore.DbContext)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass12_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method341(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-10-12 03:48:17.592 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 238 - 500 - text/plain;+charset=utf-8 11.8556ms
+[2022-10-12 04:12:29.961 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 04:12:30.050 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 04:12:30.057 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 04:12:30.057 +06:00  INF]  Hosting environment: Development
+[2022-10-12 04:12:30.057 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 04:12:35.413 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 04:12:38.333 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 2926.4793ms
+[2022-10-12 04:12:38.334 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 04:12:38.359 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 24.4553ms
+[2022-10-12 04:12:39.291 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 04:12:39.652 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 360.9236ms
+[2022-10-12 04:12:56.727 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76
+[2022-10-12 04:12:56.742 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 04:12:57.074 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 04:12:57.732 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 04:12:57.760 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 15.1221ms
+[2022-10-12 04:12:57.768 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 04:12:58.218 +06:00  ERR]  An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Stack_Overflow.API.Services.QuestionService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'Stack_Overflow.API.Services.QuestionService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.EntityFrameworkCore.DbContext dbContext' of constructor 'Void .ctor(Microsoft.EntityFrameworkCore.DbContext)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass12_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method341(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-10-12 04:12:58.879 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76 - 500 - text/plain;+charset=utf-8 2151.9268ms
+[2022-10-12 04:33:45.848 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 04:33:45.936 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 04:33:45.943 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 04:33:45.944 +06:00  INF]  Hosting environment: Development
+[2022-10-12 04:33:45.944 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 04:33:48.229 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 04:33:49.172 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 04:33:49.189 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 12.7398ms
+[2022-10-12 04:33:49.196 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 978.2741ms
+[2022-10-12 04:33:52.394 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 04:33:52.600 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 205.6081ms
+[2022-10-12 04:34:04.777 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76
+[2022-10-12 04:34:04.788 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 04:34:04.804 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 04:34:04.866 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 04:34:04.890 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 13.0119ms
+[2022-10-12 04:34:04.897 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 04:34:04.900 +06:00  ERR]  An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Stack_Overflow.API.Services.QuestionService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'Stack_Overflow.API.Services.QuestionService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.EntityFrameworkCore.DbContext dbContext' of constructor 'Void .ctor(Microsoft.EntityFrameworkCore.DbContext)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass12_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method341(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-10-12 04:34:05.012 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76 - 500 - text/plain;+charset=utf-8 235.2028ms
+[2022-10-12 05:14:07.914 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 05:14:07.990 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 05:14:07.997 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 05:14:07.997 +06:00  INF]  Hosting environment: Development
+[2022-10-12 05:14:07.997 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 05:14:09.639 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 05:14:10.938 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 05:14:10.959 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 20.9973ms
+[2022-10-12 05:14:10.970 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 1345.9574ms
+[2022-10-12 05:14:12.697 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 05:14:12.927 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 229.9284ms
+[2022-10-12 05:14:18.652 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76
+[2022-10-12 05:14:18.662 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 05:14:18.679 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 05:14:18.735 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 05:14:18.759 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 11.9829ms
+[2022-10-12 05:14:18.766 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 05:14:18.770 +06:00  ERR]  An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Stack_Overflow.API.Services.QuestionService.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'Stack_Overflow.API.Services.QuestionService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.EntityFrameworkCore.DbContext dbContext' of constructor 'Void .ctor(Microsoft.EntityFrameworkCore.DbContext)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass12_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method341(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-10-12 05:14:19.310 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76 - 500 - text/plain;+charset=utf-8 657.7849ms
+[2022-10-12 05:17:07.433 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 05:17:07.487 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 05:17:07.491 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 05:17:07.492 +06:00  INF]  Hosting environment: Development
+[2022-10-12 05:17:07.492 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 05:17:09.170 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 05:17:09.919 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 05:17:09.933 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 11.1493ms
+[2022-10-12 05:17:09.959 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 798.5892ms
+[2022-10-12 05:17:10.606 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 05:17:10.915 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 309.6674ms
+[2022-10-12 05:17:16.734 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76
+[2022-10-12 05:17:16.745 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 05:17:16.760 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 05:17:16.814 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 05:17:16.836 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 11.8447ms
+[2022-10-12 05:17:16.841 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 05:17:16.844 +06:00  ERR]  An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Stack_Overflow.API.Services.QuestionService -> Stack_Overflow.API.Contexts.ApplicationDbContext.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'Stack_Overflow.API.Contexts.ApplicationDbContext' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.EntityFrameworkCore.DbContextOptions options' of constructor 'Void .ctor(System.String, Microsoft.EntityFrameworkCore.DbContextOptions)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass12_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method341(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-10-12 05:17:16.955 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76 - 500 - text/plain;+charset=utf-8 220.8492ms
+[2022-10-12 05:56:44.646 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 05:56:44.714 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 05:56:44.719 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 05:56:44.720 +06:00  INF]  Hosting environment: Development
+[2022-10-12 05:56:44.720 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 05:56:46.937 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 05:56:47.915 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 05:56:47.935 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 16.5045ms
+[2022-10-12 05:56:47.999 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 1072.9218ms
+[2022-10-12 05:56:48.526 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 05:56:48.784 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 257.6431ms
+[2022-10-12 05:56:59.586 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76
+[2022-10-12 05:56:59.596 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 05:56:59.609 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 05:56:59.659 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 05:56:59.682 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 12.3682ms
+[2022-10-12 05:56:59.688 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 05:56:59.692 +06:00  ERR]  An unhandled exception has occurred while executing the request.
+Autofac.Core.DependencyResolutionException: An exception was thrown while activating Stack_Overflow.API.Services.QuestionService -> Stack_Overflow.API.Contexts.ApplicationDbContext.
+ ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'Stack_Overflow.API.Contexts.ApplicationDbContext' can be invoked with the available services and parameters:
+Cannot resolve parameter 'Microsoft.EntityFrameworkCore.DbContextOptions options' of constructor 'Void .ctor(System.String, Microsoft.EntityFrameworkCore.DbContextOptions)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.<>c__DisplayClass12_0.<UseSingleConstructorActivation>b__0(ResolveRequestContext ctxt, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.DisposalTrackingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.Middleware.ActivatorErrorHandlingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.<>c__DisplayClass5_0.<Execute>b__0()
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid id, Func`1 creator)
+   at Autofac.Core.Lifetime.LifetimeScope.CreateSharedInstance(Guid primaryId, Nullable`1 qualifyingId, Func`1 creator)
+   at Autofac.Core.Resolving.Middleware.SharingMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.Middleware.CircularDependencyDetectorMiddleware.Execute(ResolveRequestContext context, Action`1 next)
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, ResolveRequest request)
+   at Autofac.Core.Resolving.ResolveOperation.ExecuteOperation(ResolveRequest request)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method341(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-10-12 05:56:59.807 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76 - 500 - text/plain;+charset=utf-8 220.4819ms
+[2022-10-12 05:59:21.891 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 05:59:21.956 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 05:59:21.963 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 05:59:21.964 +06:00  INF]  Hosting environment: Development
+[2022-10-12 05:59:21.964 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 05:59:23.479 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 05:59:24.210 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 05:59:24.223 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 10.8914ms
+[2022-10-12 05:59:24.250 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 779.5477ms
+[2022-10-12 05:59:24.708 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 05:59:24.959 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 250.2506ms
+[2022-10-12 05:59:33.151 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76
+[2022-10-12 05:59:33.160 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 05:59:33.175 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 05:59:33.231 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 06:00:17.313 +06:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-10-12 06:00:17.331 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 44087.2018ms
+[2022-10-12 06:00:17.334 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 06:00:17.355 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 76 - 200 0 - 44203.5237ms
+[2022-10-12 06:02:46.877 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 06:02:46.942 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 06:02:46.949 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 06:02:46.949 +06:00  INF]  Hosting environment: Development
+[2022-10-12 06:02:46.950 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 06:02:48.257 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 06:02:49.828 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 06:02:49.842 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 11.8570ms
+[2022-10-12 06:02:49.864 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 1614.0939ms
+[2022-10-12 06:02:50.434 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 06:02:50.671 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 236.8328ms
+[2022-10-12 06:03:07.203 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 87
+[2022-10-12 06:03:07.213 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 06:03:07.228 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 06:03:07.285 +06:00  INF]  Route matched with {action = "AddQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 06:05:04.353 +06:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-10-12 06:05:04.367 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API) in 117071.8681ms
+[2022-10-12 06:05:04.370 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.AddQuestion (Stack_Overflow.API)'
+[2022-10-12 06:05:04.388 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question/AddQuestion application/json 87 - 200 0 - 117185.0871ms
+[2022-10-12 06:28:45.672 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 06:28:45.755 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 06:28:45.762 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 06:28:45.762 +06:00  INF]  Hosting environment: Development
+[2022-10-12 06:28:45.762 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 06:28:49.242 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 06:28:50.760 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 1523.1426ms
+[2022-10-12 06:28:52.614 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 06:28:52.627 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 13.2006ms
+[2022-10-12 06:28:53.332 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 06:28:53.562 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 229.1319ms
+[2022-10-12 06:29:55.292 +06:00  INF]  Request starting HTTP/2 DELETE https://localhost:7244/api/Question application/json 87
+[2022-10-12 06:29:55.300 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 06:29:55.317 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.DeleteQuestion (Stack_Overflow.API)'
+[2022-10-12 06:29:55.376 +06:00  INF]  Route matched with {action = "DeleteQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 06:30:31.593 +06:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-10-12 06:30:31.604 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.DeleteQuestion (Stack_Overflow.API) in 36219.8004ms
+[2022-10-12 06:30:31.606 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.DeleteQuestion (Stack_Overflow.API)'
+[2022-10-12 06:30:31.623 +06:00  INF]  Request finished HTTP/2 DELETE https://localhost:7244/api/Question application/json 87 - 200 0 - 36330.6449ms
+[2022-10-12 06:32:59.765 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 06:32:59.834 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 06:32:59.840 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 06:32:59.841 +06:00  INF]  Hosting environment: Development
+[2022-10-12 06:32:59.841 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 06:33:01.701 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 06:33:02.490 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 06:33:02.506 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 13.7891ms
+[2022-10-12 06:33:02.527 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 835.7713ms
+[2022-10-12 06:33:03.058 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 06:33:03.292 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 234.2912ms
+[2022-10-12 06:33:34.975 +06:00  INF]  Request starting HTTP/2 POST https://localhost:7244/api/Question application/json 75
+[2022-10-12 06:33:34.984 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 06:33:35.000 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.PostQuestion (Stack_Overflow.API)'
+[2022-10-12 06:33:35.055 +06:00  INF]  Route matched with {action = "PostQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 06:33:38.756 +06:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-10-12 06:33:38.772 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.PostQuestion (Stack_Overflow.API) in 3705.1348ms
+[2022-10-12 06:33:38.775 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.PostQuestion (Stack_Overflow.API)'
+[2022-10-12 06:33:38.796 +06:00  INF]  Request finished HTTP/2 POST https://localhost:7244/api/Question application/json 75 - 200 0 - 3820.9453ms
+[2022-10-12 06:34:12.088 +06:00  INF]  Request starting HTTP/2 PUT https://localhost:7244/api/Question application/json 75
+[2022-10-12 06:34:12.090 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 06:34:12.090 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 06:34:12.097 +06:00  INF]  Route matched with {action = "PutQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 06:35:14.403 +06:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-10-12 06:35:14.403 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API) in 62306.6539ms
+[2022-10-12 06:35:14.403 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 06:35:14.404 +06:00  INF]  Request finished HTTP/2 PUT https://localhost:7244/api/Question application/json 75 - 200 0 - 62315.4996ms
+[2022-10-12 06:36:04.068 +06:00  INF]  Request starting HTTP/2 PUT https://localhost:7244/api/Question application/json 75
+[2022-10-12 06:36:04.072 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 06:36:04.074 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 06:36:04.077 +06:00  INF]  Route matched with {action = "PutQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 06:36:22.814 +06:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-10-12 06:36:22.815 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API) in 18737.5728ms
+[2022-10-12 06:36:22.815 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 06:36:22.815 +06:00  INF]  Request finished HTTP/2 PUT https://localhost:7244/api/Question application/json 75 - 200 0 - 18747.2485ms
+[2022-10-12 06:37:14.130 +06:00  INF]  Request starting HTTP/2 PUT https://localhost:7244/api/Question application/json 75
+[2022-10-12 06:37:14.134 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 06:37:14.136 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 06:37:14.136 +06:00  INF]  Route matched with {action = "PutQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 06:37:19.095 +06:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-10-12 06:37:19.095 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API) in 4959.0079ms
+[2022-10-12 06:37:19.095 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 06:37:19.095 +06:00  INF]  Request finished HTTP/2 PUT https://localhost:7244/api/Question application/json 75 - 200 0 - 4965.7775ms
+[2022-10-12 06:37:22.346 +06:00  INF]  Request starting HTTP/2 PUT https://localhost:7244/api/Question application/json 75
+[2022-10-12 06:37:22.346 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 06:37:22.346 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 06:37:22.346 +06:00  INF]  Route matched with {action = "PutQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 06:37:22.353 +06:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-10-12 06:37:22.353 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API) in 6.8209ms
+[2022-10-12 06:37:22.353 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 06:37:22.354 +06:00  INF]  Request finished HTTP/2 PUT https://localhost:7244/api/Question application/json 75 - 200 0 - 7.8218ms
+[2022-10-12 09:57:58.986 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 09:57:59.065 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 09:57:59.072 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 09:57:59.073 +06:00  INF]  Hosting environment: Development
+[2022-10-12 09:57:59.073 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 09:58:01.610 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 09:58:02.674 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 09:58:02.687 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 10.4436ms
+[2022-10-12 09:58:02.687 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 1085.5120ms
+[2022-10-12 09:58:03.449 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 09:58:03.689 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 239.4971ms
+[2022-10-12 09:58:53.726 +06:00  INF]  Request starting HTTP/2 PUT https://localhost:7244/api/Question application/json 61
+[2022-10-12 09:58:53.734 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 09:58:53.750 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 09:58:53.805 +06:00  INF]  Route matched with {action = "PutQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 10:00:09.915 +06:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-10-12 10:00:09.928 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API) in 76114.4039ms
+[2022-10-12 10:00:09.930 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 10:00:09.948 +06:00  INF]  Request finished HTTP/2 PUT https://localhost:7244/api/Question application/json 61 - 200 0 - 76222.2454ms
+[2022-10-12 10:02:24.614 +06:00  INF]  Request starting HTTP/2 PUT https://localhost:7244/api/Question application/json 61
+[2022-10-12 10:02:24.614 +06:00  INF]  CORS policy execution successful.
+[2022-10-12 10:02:24.614 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 10:02:24.615 +06:00  INF]  Route matched with {action = "PutQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 10:02:29.002 +06:00  INF]  Executing StatusCodeResult, setting HTTP status code 200
+[2022-10-12 10:02:29.002 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API) in 4387.3106ms
+[2022-10-12 10:02:29.002 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.PutQuestion (Stack_Overflow.API)'
+[2022-10-12 10:02:29.003 +06:00  INF]  Request finished HTTP/2 PUT https://localhost:7244/api/Question application/json 61 - 200 0 - 4389.2002ms
+[2022-10-12 10:13:01.057 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 10:13:01.103 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 10:13:01.107 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 10:13:01.107 +06:00  INF]  Hosting environment: Development
+[2022-10-12 10:13:01.107 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 10:13:02.983 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 10:13:03.459 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 477.1864ms
+[2022-10-12 10:13:03.581 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 10:13:03.589 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 8.7317ms
+[2022-10-12 10:13:04.273 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 10:13:04.441 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 168.0508ms
+[2022-10-12 10:13:25.179 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/api/Question?id=4 - -
+[2022-10-12 10:13:25.196 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:13:25.286 +06:00  INF]  Route matched with {action = "GetQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 10:13:31.185 +06:00  INF]  Executing OkObjectResult, writing value of type 'Stack_Overflow.API.BisinessModels.Question'.
+[2022-10-12 10:13:31.227 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API) in 5923.1767ms
+[2022-10-12 10:13:31.235 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:13:31.278 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/api/Question?id=4 - - - 200 - application/json;+charset=utf-8 6098.9887ms
+[2022-10-12 10:13:44.337 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/api/Question?id=4 - -
+[2022-10-12 10:13:44.343 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:13:44.343 +06:00  INF]  Route matched with {action = "GetQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 10:14:55.063 +06:00  INF]  Executing OkObjectResult, writing value of type 'Stack_Overflow.API.BisinessModels.Question'.
+[2022-10-12 10:14:55.140 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API) in 70797.1555ms
+[2022-10-12 10:14:55.141 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:14:55.141 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/api/Question?id=4 - - - 200 - application/json;+charset=utf-8 70803.6808ms
+[2022-10-12 10:15:18.556 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/api/Question - -
+[2022-10-12 10:15:18.558 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:15:18.559 +06:00  INF]  Route matched with {action = "GetQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 10:15:46.162 +06:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2022-10-12 10:15:46.168 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API) in 27608.7382ms
+[2022-10-12 10:15:46.169 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:15:46.169 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/api/Question - - - 400 - application/problem+json;+charset=utf-8 27613.4287ms
+[2022-10-12 10:33:51.572 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 10:33:51.668 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 10:33:51.674 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 10:33:51.674 +06:00  INF]  Hosting environment: Development
+[2022-10-12 10:33:51.674 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 10:33:53.542 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 10:33:54.346 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 808.3296ms
+[2022-10-12 10:33:54.430 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 10:33:54.441 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 11.0557ms
+[2022-10-12 10:33:54.793 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 10:33:54.929 +06:00  ERR]  An unhandled exception has occurred while executing the request.
+Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/path combination "GET api/Question" for actions - Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API),Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API). Actions require a unique method/path combination for Swagger/OpenAPI 3.0. Use ConflictingActionsResolver as a workaround
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GenerateOperations(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GeneratePaths(IEnumerable`1 apiDescriptions, SchemaRepository schemaRepository)
+   at Swashbuckle.AspNetCore.SwaggerGen.SwaggerGenerator.GetSwagger(String documentName, String host, String basePath)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-10-12 10:33:55.048 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 500 - text/plain;+charset=utf-8 254.3569ms
+[2022-10-12 10:35:22.956 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 10:35:23.000 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 10:35:23.005 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 10:35:23.005 +06:00  INF]  Hosting environment: Development
+[2022-10-12 10:35:23.005 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 10:35:24.335 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 10:35:24.814 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 10:35:24.825 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 9.0659ms
+[2022-10-12 10:35:24.841 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 511.5935ms
+[2022-10-12 10:35:25.186 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 10:35:25.336 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.3854ms
+[2022-10-12 10:35:38.638 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/api/Question/4 - -
+[2022-10-12 10:35:38.666 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:35:38.755 +06:00  INF]  Route matched with {action = "GetQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 10:35:46.118 +06:00  INF]  Executing OkObjectResult, writing value of type 'Stack_Overflow.API.BisinessModels.Question'.
+[2022-10-12 10:35:46.162 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API) in 7388.2221ms
+[2022-10-12 10:35:46.171 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:35:46.200 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/api/Question/4 - - - 200 - application/json;+charset=utf-8 7561.5914ms
+[2022-10-12 10:35:50.909 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/api/Question/4 - -
+[2022-10-12 10:35:50.910 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:35:50.910 +06:00  INF]  Route matched with {action = "GetQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetQuestion(Int32) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 10:35:51.095 +06:00  INF]  Executing OkObjectResult, writing value of type 'Stack_Overflow.API.BisinessModels.Question'.
+[2022-10-12 10:35:51.095 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API) in 184.5324ms
+[2022-10-12 10:35:51.095 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:35:51.095 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/api/Question/4 - - - 200 - application/json;+charset=utf-8 186.3331ms
+[2022-10-12 10:36:04.865 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/api/Question - -
+[2022-10-12 10:36:04.867 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:36:04.906 +06:00  INF]  Route matched with {action = "GetQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Stack_Overflow.API.BisinessModels.Question]]] GetQuestion() on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-10-12 10:36:10.358 +06:00  INF]  Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Stack_Overflow.API.Models.Question, Stack_Overflow.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+[2022-10-12 10:36:10.362 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API) in 5456.1122ms
+[2022-10-12 10:36:10.362 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.GetQuestion (Stack_Overflow.API)'
+[2022-10-12 10:36:10.363 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/api/Question - - - 200 - application/json;+charset=utf-8 5498.2158ms
+[2022-10-12 11:21:21.625 +06:00  INF]  Now listening on: https://localhost:7244
+[2022-10-12 11:21:21.689 +06:00  INF]  Now listening on: http://localhost:5244
+[2022-10-12 11:21:21.697 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-10-12 11:21:21.697 +06:00  INF]  Hosting environment: Development
+[2022-10-12 11:21:21.697 +06:00  INF]  Content root path: D:\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-10-12 11:21:23.546 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/index.html - -
+[2022-10-12 11:21:24.506 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - -
+[2022-10-12 11:21:24.528 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 19.3459ms
+[2022-10-12 11:21:24.607 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/index.html - - - 200 - text/html;charset=utf-8 1069.7873ms
+[2022-10-12 11:21:25.204 +06:00  INF]  Request starting HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - -
+[2022-10-12 11:21:25.474 +06:00  INF]  Request finished HTTP/2 GET https://localhost:7244/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 270.1939ms
