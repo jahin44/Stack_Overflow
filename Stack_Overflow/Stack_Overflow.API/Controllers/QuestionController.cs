@@ -24,8 +24,8 @@ namespace Stack_Overflow.API.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    await _questionService.Add(question);
-                    return Ok();
+                      await _questionService.Add(question);
+                      return Ok();
                 }
                 else { return BadRequest(); }
             }

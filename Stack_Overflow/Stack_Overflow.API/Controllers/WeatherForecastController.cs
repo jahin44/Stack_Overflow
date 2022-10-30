@@ -9,6 +9,7 @@ namespace Stack_Overflow.API.Controllers
         private static readonly string[] Summaries = new[]
         {
         "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
+            //LOL
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
