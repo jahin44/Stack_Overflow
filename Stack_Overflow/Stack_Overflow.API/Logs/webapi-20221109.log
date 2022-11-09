@@ -1,0 +1,45 @@
+[2022-11-09 18:25:12.180 +06:00  INF]  Application started. Press Ctrl+C to shut down.
+[2022-11-09 18:25:12.407 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/swagger - -
+[2022-11-09 18:25:12.445 +06:00  INF]  Hosting environment: Development
+[2022-11-09 18:25:12.447 +06:00  INF]  Content root path: E:\3s\Stack_Overflow\Stack_Overflow\Stack_Overflow.API\
+[2022-11-09 18:25:12.979 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/swagger/index.html - -
+[2022-11-09 18:25:12.999 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/swagger - - - 301 - - 602.3884ms
+[2022-11-09 18:25:18.454 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/swagger/index.html - - - 200 - text/html;charset=utf-8 5462.2813ms
+[2022-11-09 18:25:18.534 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/swagger/swagger-ui-bundle.js - -
+[2022-11-09 18:25:18.552 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/swagger/swagger-ui.css - -
+[2022-11-09 18:25:18.561 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+[2022-11-09 18:25:18.612 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/swagger/swagger-ui-standalone-preset.js - -
+[2022-11-09 18:25:18.645 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 85.6546ms
+[2022-11-09 18:25:18.676 +06:00  INF]  Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[2022-11-09 18:25:18.676 +06:00  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2022-11-09 18:25:18.698 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/swagger/swagger-ui.css - - - 200 143632 text/css 145.8850ms
+[2022-11-09 18:25:18.743 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 133.9651ms
+[2022-11-09 18:25:18.764 +06:00  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2022-11-09 18:25:18.789 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - -
+[2022-11-09 18:25:18.790 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/_framework/aspnetcore-browser-refresh.js - - - 200 12006 application/javascript;+charset=utf-8 1.2842ms
+[2022-11-09 18:25:18.859 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 325.6601ms
+[2022-11-09 18:25:18.931 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+[2022-11-09 18:25:19.043 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/swagger/swagger-ui-standalone-preset.js - -
+[2022-11-09 18:25:19.055 +06:00  INF]  Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[2022-11-09 18:25:19.088 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 45.3110ms
+[2022-11-09 18:25:19.195 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 263.8496ms
+[2022-11-09 18:25:19.261 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/swagger/swagger-ui-bundle.js - -
+[2022-11-09 18:25:19.271 +06:00  INF]  Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[2022-11-09 18:25:19.370 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 108.8415ms
+[2022-11-09 18:25:19.397 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/swagger/favicon-32x32.png - -
+[2022-11-09 18:25:19.401 +06:00  INF]  Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[2022-11-09 18:25:19.402 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/swagger/favicon-32x32.png - - - 200 628 image/png 4.3950ms
+[2022-11-09 18:25:19.689 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - -
+[2022-11-09 18:25:20.048 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 359.4006ms
+[2022-11-09 18:25:21.406 +06:00  INF]  Request starting HTTP/2 GET https://localhost:44380/_vs/browserLink - -
+[2022-11-09 18:25:21.490 +06:00  INF]  Request finished HTTP/2 GET https://localhost:44380/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 83.9332ms
+[2022-11-09 18:25:32.622 +06:00  INF]  Request starting HTTP/2 POST https://localhost:44380/api/Question application/json 76
+[2022-11-09 18:25:32.640 +06:00  INF]  CORS policy execution successful.
+[2022-11-09 18:25:32.680 +06:00  INF]  Executing endpoint 'Stack_Overflow.API.Controllers.QuestionController.PostQuestion (Stack_Overflow.API)'
+[2022-11-09 18:25:32.750 +06:00  INF]  Route matched with {action = "PostQuestion", controller = "Question"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PostQuestion(Stack_Overflow.API.BisinessModels.Question) on controller Stack_Overflow.API.Controllers.QuestionController (Stack_Overflow.API).
+[2022-11-09 18:25:37.068 +06:00  INF]  Executing action method Stack_Overflow.API.Controllers.QuestionController.PostQuestion (Stack_Overflow.API) - Validation state: "Valid"
+[2022-11-09 18:25:54.428 +06:00  INF]  Executed action method Stack_Overflow.API.Controllers.QuestionController.PostQuestion (Stack_Overflow.API), returned result Microsoft.AspNetCore.Mvc.BadRequestResult in 17335.7657ms.
+[2022-11-09 18:25:54.454 +06:00  INF]  Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+[2022-11-09 18:25:54.488 +06:00  INF]  Executed action Stack_Overflow.API.Controllers.QuestionController.PostQuestion (Stack_Overflow.API) in 21720.2751ms
+[2022-11-09 18:25:54.491 +06:00  INF]  Executed endpoint 'Stack_Overflow.API.Controllers.QuestionController.PostQuestion (Stack_Overflow.API)'
+[2022-11-09 18:25:54.519 +06:00  INF]  Request finished HTTP/2 POST https://localhost:44380/api/Question application/json 76 - 400 - application/problem+json;+charset=utf-8 21896.3385ms

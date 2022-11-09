@@ -31,8 +31,8 @@ namespace Stack_Overflow.API.Controllers
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("error", ex.Message);
-                return BadRequest();
+                 ModelState.AddModelError("error", ex.Message);
+                 return BadRequest();
 
             }
         }
